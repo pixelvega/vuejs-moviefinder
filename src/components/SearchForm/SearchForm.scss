@@ -1,0 +1,20 @@
+@import "../../_common/variables";
+
+#searchform {
+  .icon-search {
+    font-size: 40px;
+    margin-right: 20px;
+  }
+
+  .btn {
+    margin-left: 20px;
+    background-color: $gold;
+    color: $black;
+    transition: .3s all linear;
+
+    &:hover {
+      background-color: $black;
+      color: $gold;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="film">
+  <div class="image">
+    <img v-on:load="showFilm" v-show="visible" :src="poster" class="img-fluid" />
+  </div>
+  <div class="info">
+    <h3>{{ title }}</h3>
+    <p>{{ year }}</p>
+    <button class="icon-info"></button>
+  </div>
+</div>

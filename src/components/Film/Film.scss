@@ -1,0 +1,61 @@
+@import "../../_common/variables";
+
+.film {
+  position: relative;
+  margin-bottom: 30px;
+
+  .image {
+    height: 60vh;
+    border: 1px solid $gold;
+
+    &::before {
+      font-family: 'icomoon' !important;
+      content: "\e90d";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    padding: 30px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $gold;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    button {
+      background: transparent;
+      color: $gold;
+      border: 0px;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  }
+}

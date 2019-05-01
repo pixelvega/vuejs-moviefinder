@@ -1,7 +1,17 @@
 @import "../../_common/variables";
 
 .header {
-  p {
+  height: 60px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  #navi {
+    height: 100%;
+  }
+
+  a {
     color: $gold;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
   }
 }

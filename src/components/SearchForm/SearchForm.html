@@ -1,0 +1,25 @@
+  <div class="container" id="searchform">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <p class="text-center">Write the title you want to search.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form class="card card-sm" @submit="searchfilms">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <span class="icon-search"></span>
+            </div>
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" type="search"
+                placeholder="Search Films" v-model="filmtitle">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-lg" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

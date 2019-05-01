@@ -1,4 +1,19 @@
-<div class="home">
-  <img alt="Vue logo" src="../../assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+<div id="results">
+  <Header />
+  <SearchForm />
+  <div class="container" v-if="films">
+    <carousel v-if="films.length" :items="4" :loop="false" :dots="false" :margin="30">
+      <Film v-for="film in films" class="films" :key="film.imdbID" :title="film.Title" :poster="film.Poster"
+        :year="film.Year" />
+    </carousel>
+  </div>
+  <div class="container" v-if="!films">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <p class="text-center">No results</p>
+      </div>
+    </div>
+  </div>
+
+
 </div>
