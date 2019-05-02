@@ -1,6 +1,7 @@
 // @ is an alias to /src
 import Header from "@/components/Header/Header.vue";
 import Film from "@/components/Film/Film.vue";
+import FilmProfile from "@/components/FilmProfile/FilmProfile.vue";
 import SearchForm from "@/components/SearchForm/SearchForm.vue";
 import carousel from 'vue-owl-carousel'
 
@@ -9,6 +10,7 @@ export default {
   components: {
     Header,
     Film,
+    FilmProfile,
     SearchForm,
     carousel
   },

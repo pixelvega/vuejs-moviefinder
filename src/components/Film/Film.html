@@ -2,9 +2,9 @@
   <div class="image">
     <img v-on:load="showFilm" v-show="visible" :src="poster" class="img-fluid" />
   </div>
-  <div class="info">
+  <div class="info" @click="showProfile">
     <h3>{{ title }}</h3>
     <p>{{ year }}</p>
-    <button class="icon-info"></button>
+    <div @click="showProfile" class="moreinfo"><i class="icon-info"></i> more info</div>
   </div>
 </div>

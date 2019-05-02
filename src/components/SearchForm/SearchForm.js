@@ -2,13 +2,14 @@ export default {
   name: 'SearchForm',
   data: function () {
     return {
-      filmtitle: ''
+      filmtitle: '',
+      filmquery: ''
     }
   },
   created() {
-    let filmquery = this.$route.query.film
-    if (filmquery != undefined) {
-      this.filmtitle = filmquery;
+    this.filmquery = this.$route.query.film
+    if (this.filmquery != undefined) {
+      this.filmtitle = this.filmquery;
     }
   },
   methods: {

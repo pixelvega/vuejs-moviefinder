@@ -8,10 +8,11 @@ export default new Vuex.Store({
   state: {
     loading: true,
     films: [],
+    film: {}
   },
   getters: {
-    getFilm: state => state.films,
-    films: state => state.films
+    films: state => state.films,
+    film: state => state.film
   },
   mutations: {
     SET_LOADING(state, flag) {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     SET_FILMS(state, films) {
       state.films = films
+    },
+    SET_FILM(state, film) {
+      state.film = film
     }
   },
   actions: {
@@ -34,6 +38,24 @@ export default new Vuex.Store({
           commit('SET_FILMS', films.Search)
           commit('SET_LOADING', false)
         })
+    },
+    loadFilm({
+      commit
+    }, id) {
+      commit('SET_FILM', {})
+      commit('SET_LOADING', true)
+      axios
+        .get('http://www.omdbapi.com/?i=' + id + '&apikey=3a581182')
+        .then(r => r.data)
+        .then(film => {
+          commit('SET_FILM', film)
+          commit('SET_LOADING', false)
+        })
+    },
+    cleanFilm({
+      commit
+    }) {
+      commit('SET_FILM', {})
     }
   }
 })

@@ -1,0 +1,15 @@
+<transition name="fade">
+  <div class="film-profile" v-if="film.Title">
+    <div class="close" @click="close">X</div>
+    <div class="image">
+      <img :src="film.Poster" class="img-fluid" />
+    </div>
+    <div class="info text-left">
+      <h3>{{ film.Title }}</h3>
+      <p><strong>Year:</strong> {{ film.Year }}</p>
+      <p><strong>Director:</strong> {{ film.Director }}</p>
+      <p><strong>Genre:</strong> {{ film.Genre }}</p>
+
+    </div>
+  </div>
+</transition>
