@@ -32,7 +32,7 @@ export default new Vuex.Store({
       commit('SET_FILMS', [])
       commit('SET_LOADING', true)
       axios
-        .get('http://www.omdbapi.com/?s=' + queryFilm + '&apikey=3a581182&type=movie')
+        .get('https://www.omdbapi.com/?s=' + queryFilm + '&apikey=3a581182&type=movie')
         .then(r => r.data)
         .then(films => {
           commit('SET_FILMS', films.Search)
@@ -45,7 +45,7 @@ export default new Vuex.Store({
       commit('SET_FILM', {})
       commit('SET_LOADING', true)
       axios
-        .get('http://www.omdbapi.com/?i=' + id + '&apikey=3a581182')
+        .get('https://www.omdbapi.com/?i=' + id + '&apikey=3a581182')
         .then(r => r.data)
         .then(film => {
           commit('SET_FILM', film)

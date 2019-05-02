@@ -6,6 +6,10 @@ You can search a movie and get a slider with results using axios and http://www.
 
 Also you can get the results with url with URL example.com/results?film=good getting the parameter **film** as a variable to search in omdbapi.
 
+## Demo
+
+https://moviefinder-7929a.firebaseapp.com
+
 ## Structure
 
 - **Views**
